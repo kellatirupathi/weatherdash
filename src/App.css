@@ -1,38 +1,152 @@
-.App {
+/* src/App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00509e;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.error {
+  color: #ff4f4f;
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search Bar Styling */
+.search-bar {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar input {
+  padding: 12px;
+  width: 60%;
+  border: 2px solid #00509e;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-bar button {
+  padding: 12px 16px;
+  background-color: #00509e;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #003f7f;
+}
+
+/* Current Weather Styling */
+.weather-card {
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-card h2 {
+  color: #00509e;
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+.weather-card img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+/* 5-Day Forecast Styling */
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast h2 {
+  color: #00509e;
+  margin-bottom: 10px;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  width: 120px;
+  padding: 15px;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.forecast-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.forecast-card img {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar input {
+    width: 70%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .forecast-cards {
+    gap: 10px;
+  }
+
+  .weather-card, .forecast-card {
+    width: 90%;
   }
 }
