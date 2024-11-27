@@ -1,11 +1,12 @@
-// src/components/SearchBar.js
 import React, { useState } from 'react';
 
 function SearchBar({ onSearch }) {
   const [city, setCity] = useState('');
 
   const handleSearch = () => {
-    onSearch(city);
+    if (city.trim() !== '') {
+      onSearch(city);
+    }
   };
 
   return (
